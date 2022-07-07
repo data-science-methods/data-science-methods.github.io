@@ -1,0 +1,24 @@
+project:
+  type: website
+
+website:
+  title: "Methods of Data Science I"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Reading & Schedule
+      - about.qmd
+      - requirements.qmd
+      - reflexivity.qmd
+      - project.qmd
+      - href: https://data-science-methods.github.io/book/
+        text: Lecture notes
+
+format:
+  html:
+    theme: minty
+    css: styles.css
+    toc: false
+
+
+

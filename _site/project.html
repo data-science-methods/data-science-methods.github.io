@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.600">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Methods of Data Science I - Course project</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Methods of Data Science I</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Reading &amp; Schedule</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html">About</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./requirements.html">Requirements</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./reflexivity.html">Reflexivity questions</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./project.html" aria-current="page">Course project</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://data-science-methods.github.io/book/">Lecture notes</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#proposal" id="toc-proposal" class="nav-link active" data-scroll-target="#proposal">Proposal</a></li>
+  <li><a href="#data-journey-narrative" id="toc-data-journey-narrative" class="nav-link" data-scroll-target="#data-journey-narrative">Data journey narrative</a></li>
+  <li><a href="#exploratory-data-analysis" id="toc-exploratory-data-analysis" class="nav-link" data-scroll-target="#exploratory-data-analysis">Exploratory data analysis</a></li>
+  <li><a href="#reproducible-report" id="toc-reproducible-report" class="nav-link" data-scroll-target="#reproducible-report">(Reproducible) report</a></li>
+  <li><a href="#flash-talk-presentation" id="toc-flash-talk-presentation" class="nav-link" data-scroll-target="#flash-talk-presentation">Flash talk presentation</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Course project</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>In this project, you’ll practice and synthesize your data science skills. The project is <a href="https://en.wikipedia.org/wiki/Instructional_scaffolding#Levels_and_types_in_the_educational_setting">scaffolded</a> into 5 stages, with due dates throughout the term. The project is progressive and iterative: you’ll get feedback from me after each stage, and be able to rework previous stages if necessary as you move forward.</p>
+<section id="proposal" class="level1">
+<h1>Proposal</h1>
+<p><strong>What to submit:</strong> The proposal document, in the text of an email or as an attached plaintext, HTML, or PDF file</p>
+<p>Your proposal should formulate a <strong>research question</strong> for your project and identify a <strong>dataset</strong> that you’ll analyze to address your research question.</p>
+<p>Your research question can be a more formal, academic question — like something from your home discipline — or a more causal, “data science-y” question — like you might examine in a hackathon, data science challenge, or detailed blog post.</p>
+<p>The dataset should be relatively large and complex, and <strong>not data that you have collected yourself or previously analyzed</strong>. Part of the work of researching the data journey and exploring data analysis is familiarizing yourself with found or opportunistic data. It’s okay if you’re using the dataset for a project in another class or your lab group this semester, so long as you’re asking a very different research question.</p>
+<p>Because you’re working with opportunistic data, it might be easier to find an interesting dataset first, then develop your research question.</p>
+<p>If you’re having trouble finding interesting datasets, try <a href="https://github.com/rfordatascience/tidytuesday">the TidyTuesday project</a> or <a href="https://www.kaggle.com/datasets">the Kaggle dataset library</a>.</p>
+<p>The <strong>proposal document</strong> should be 3 paragraphs long, with 75-150 words per paragraph. The paragraphs should be labeled “Intellectual Merit,” “Broader Impacts,” and “Data and Methods,” in that order.</p>
+<dl>
+<dt>Intellectual Merit</dt>
+<dd>
+What is your primary research question? Why is this question interesting and worth investigating, from an academic or intellectual perspective?
+</dd>
+<dt>Broader Impacts</dt>
+<dd>
+Why is your research question socially valuable? Why should the general public care about the answer to this question, and pay someone to investigate it?
+</dd>
+<dt>Data and Methods</dt>
+<dd>
+What dataset will you use to investigate your question? Why does this dataset seem appropriate for your question? What analytical methods will you apply? Because it’s not the focus of our class, you don’t have to use any fancy statistical methods (for whatever “fancy” means to you). You can even focus on exploratory methods, such as descriptive summaries and visualization.
+</dd>
+</dl>
+</section>
+<section id="data-journey-narrative" class="level1">
+<h1>Data journey narrative</h1>
+<p><em>[tbd]</em></p>
+</section>
+<section id="exploratory-data-analysis" class="level1">
+<h1>Exploratory data analysis</h1>
+<p><em>[tbd]</em></p>
+<p>Your exploratory analysis should cover the most relevant elements from the EDA checklists to validate your data. Be sure to identify and address limitations of your data for answering your research question. If your EDA concludes that these data are not fit for purpose, it’s okay to continue forward with your project. Your report in the next stage should focus on explaining why your data are not fit for purpose, and then discuss how better data might be collected.</p>
+</section>
+<section id="reproducible-report" class="level1">
+<h1>(Reproducible) report</h1>
+<p><strong>What to submit:</strong> A PDF of your report, a link or invitation to your GitHub repo with automatically reproducible code and data</p>
+<p>The report for your analysis should structured somewhat like a traditional scientific paper: introduction, methods, results, discussion. But the content of these sections will be somewhat non-traditional.</p>
+<p>The total length of this report should be 3,000-5,000 words, not including references.</p>
+<p><em>As a stretch goal</em>, your report should be <strong>fully reproducible</strong>. Using <code>renv</code> and a Makefile, I should be able to clone your repository and then follow instructions in the <code>README</code> to exactly reproduce the PDF of your report.</p>
+<dl>
+<dt>Introduction</dt>
+<dd>
+<p>As usual, motivate your topic, give some background, and clearly state the research question.</p>
+<p>In addition, incorporate answers to the <a href="reflexivity">reflexivity questions</a>: what did you already know about this topic before starting to work on the project, what did you expect to find, who’s impacted by this topic, and how will your work respect them?</p>
+</dd>
+<dt>Methods</dt>
+<dd>
+The methods section should focus on the data, and in particular should incorporate your data journey narrative.
+</dd>
+<dt>Results</dt>
+<dd>
+<p>As usual, your findings should be framed as phenomena (in the sense of the Brown chapter) rather than causal claims, mechanisms, or theoretical results.</p>
+<p>The first subsection of your findings should incorporate your EDA. The second subsection can address your research questions. Use visualizations along with or instead of tables. Keep your visualizations close to the data. For example, include both a scatterplot and a fitted regression curve.</p>
+</dd>
+<dt>Discussion</dt>
+<dd>
+<p>As usual, briefly (1-2 sentences) recap your major findings, then discuss limitations and directions for future research.</p>
+<p>Resist the temptation to treat your findings as conclusive or as vindicating (or challenging) some larger theory. Instead, emphasize the ways future research can improve our understanding of the phenomena: how new data might be collected to mitigate the limitations of this dataset, how different kinds of data might complement the kind of data used here, and how further studies might trace out the scope of the phenomena found in this dataset.</p>
+<p>Finally, come back to the reflexivity questions in the introduction. Were your expectations met? (Probably a mix of both yes and no; explain.) What implications might your findings have for people affected by the topic? How should these implications shape the trajectory of future research on this topic?</p>
+</dd>
+</dl>
+</section>
+<section id="flash-talk-presentation" class="level1">
+<h1>Flash talk presentation</h1>
+<p><strong>What to submit:</strong> You won’t submit anything, but you will give a presentation for the class</p>
+<p>At the last class meeting, you’ll give a 5-minute presentation of your project. Your target audience is the other students in the class, so you’ll need to start by motivating your project and be thoughtful about the use of jargon from your home discipline. Depending on how much time we have, we may or may not have questions after the flash talks.</p>
+<p>You should use slides for your presentation, but you don’t have to turn them in. Google Slides, PowerPoint, Keynote, or whatever are fine, because you’re responsible for arranging to project your slides and checking in advance that everything works as expected in our classroom.</p>
+<p>Because flash talks are so short, I strongly recommend writing a script, checking the timing, and then memorizing the script. There <em>will</em> be a loud timer at 5 minutes.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

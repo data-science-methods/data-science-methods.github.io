@@ -1,0 +1,46 @@
+
+
+Fall 2022  
+UC Merced  
+Prof. Dan Hicks (they/them)\
+[Sign up for office hours](https://doodle.com/mm/danhicks/office-hours)
+
+GRAN 120  
+TÞ 12:00-1:15pm
+
+```{r setup}
+#| include: false
+library(tidyverse)
+library(googlesheets4)
+library(lubridate)
+library(pander)
+# overview_df = read_csv('../resources/Data Science Methods - Sheet1.csv')
+overview_gs = 'https://docs.google.com/spreadsheets/d/1TwZkI452mmXm7oqL3SlNc5AQvKW8by5rLM8opP7V34Q/edit#gid=1257700791'
+
+overview_df = read_sheet(overview_gs) %>% 
+    mutate(lab = if_else(!is.na(lab_title), 
+                         glue::glue('[{lab_title}]({lab_link})', 
+                                    .na = ''), 
+                         ''))
+```
+
+```{r overview, echo = FALSE, results = 'asis'}
+table = overview_df %>% 
+    slice(1:2) %>%
+    select(week, date, topic, readings, lab) %>% 
+    mutate(date = stamp('Mar 1', quiet = TRUE)(date) 
+           #date = str_pad(date, 30, side = 'left')
+           ) %>% 
+    pandoc.table.return(justify = c('rllll'),
+                        missing = '',
+                        split.tables = Inf, 
+                        keep.line.breaks = TRUE,
+                        style = 'grid')
+# write_lines(table, '../table.md')
+
+# cat(table)
+table |>
+    str_c('\n\n: {tbl-colwidths="[10,10,20,30,30]"}') |>
+    cat()
+```
+
