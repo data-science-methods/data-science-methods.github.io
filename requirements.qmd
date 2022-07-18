@@ -13,11 +13,11 @@ Project
 
 |    | stage                     | deadline |
 |----|---------------------------|----------|
-|  1 | Proposal                  | Sept 16  |
-|  2 | Data journey narrative    | |
-|  3 | Exploratory data analysis | |
-|  4 | Reproducible report       | |
-|  5 | Flash talk presentation   | |
+|  1 | Proposal                  | Sept 22  |
+|  2 | Data journey narrative    | Oct  13  |
+|  3 | Exploratory data analysis | Oct  27  |
+|  4 | Reproducible report       | Dec   8  |
+|  5 | Flash talk presentation   | Dec  13  |
 
 The usual
  ~ Do the assigned reading, come to class prepared to discuss it, contribute to class and your lab collaborations, and so on. 
