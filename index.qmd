@@ -13,34 +13,79 @@ TÞ 12:00-1:15pm
 library(tidyverse)
 library(googlesheets4)
 library(lubridate)
-library(pander)
-# overview_df = read_csv('../resources/Data Science Methods - Sheet1.csv')
-overview_gs = 'https://docs.google.com/spreadsheets/d/1TwZkI452mmXm7oqL3SlNc5AQvKW8by5rLM8opP7V34Q/edit#gid=1257700791'
+# library(pander)
+library(gt)
 
-overview_df = read_sheet(overview_gs) %>% 
-    mutate(lab = if_else(!is.na(lab_title), 
-                         glue::glue('[{lab_title}]({lab_link})', 
-                                    .na = ''), 
+overview_gs = 'https://docs.google.com/spreadsheets/d/1tV011kdW-wMbch97FMdhArL9Boy_uIi15hwE3BtCjaw/edit#gid=1257700791'
+
+overview_df = read_sheet(overview_gs, 
+                         col_types = 'iDcccc') |> 
+    mutate(assignment = if_else(!is.na(assignment_title),
+                         glue::glue('[{assignment_title}]({assignment_link})',
+                                    .na = ''),
                          ''))
 ```
 
-```{r overview, echo = FALSE, results = 'asis'}
-table = overview_df %>% 
-    slice(1:2) %>%
-    select(week, date, topic, readings, lab) %>% 
-    mutate(date = stamp('Mar 1', quiet = TRUE)(date) 
-           #date = str_pad(date, 30, side = 'left')
-           ) %>% 
-    pandoc.table.return(justify = c('rllll'),
-                        missing = '',
-                        split.tables = Inf, 
-                        keep.line.breaks = TRUE,
-                        style = 'grid')
-# write_lines(table, '../table.md')
-
-# cat(table)
-table |>
-    str_c('\n\n: {tbl-colwidths="[10,10,20,30,30]"}') |>
-    cat()
+```{css, echo = FALSE}
+table {
+    font-size: 80% !important;
+    width: 100% !important;
+}
 ```
+
+::: {.column-page}
+```{r overview}
+#| echo: false
+#| results: "asis"
+#| tbl-colwidths: [10,20,20,30,20]
+table = overview_df |> 
+    # slice(1:8) |> 
+    select(week, date, topic, readings, assignment) |> 
+    mutate(date = stamp('Mar 1', quiet = TRUE)(date) 
+           ) |> 
+    gt() |> 
+    ## Parse columns
+    fmt_markdown(columns = c(topic, readings, assignment)) |> 
+    sub_missing(missing_text = '') |> 
+    ## Text alignment
+    tab_style(style = 'vertical-align:top;',
+              locations = cells_body()) |>
+    cols_align(align = 'left') |> 
+    cols_align(align = 'right', 
+               columns = c(week)) |> 
+    ## gt ignores tbl-colwidths??
+    cols_width(c(week) ~ pct(5), 
+               c(date) ~ pct(10), 
+               c(topic) ~ pct(20), 
+               c(readings) ~ pct(50), 
+               c(assignment) ~ pct(15)) |> 
+    ## Bold headers
+    tab_style(style = cell_text(weight = 'bold'), 
+              locations = cells_column_labels()) |> 
+    ## Alternate row shading
+    ## Can't figure out how to get it to play nice with theme
+    # tab_style(style = list(#cell_text(color = '#FFFFFF'),
+    #                        cell_fill()),#color = '#6CC3D5')),
+    #           locations = cells_body(rows = (week %% 2 == 0)))
+    ## Group rows into units
+    tab_row_group(label = 'Reproducibility and replicability', 
+                  rows = 9:16) |> 
+    tab_row_group(label = 'Exploratory data analysis', 
+                  rows = 6:8) |> 
+    tab_row_group(label = 'Some fundamental tools', 
+                  rows = 1:5) |> 
+    tab_style(style = list(cell_text(color = 'white', 
+                                     weight = 'bold'), 
+                           cell_fill(color = '#78C2AD')),
+              locations = cells_row_groups())
+    
+    # pandoc.table.return(justify = c('rllll'),
+    #                     missing = '',
+    #                     split.tables = Inf, 
+    #                     keep.line.breaks = TRUE,
+    #                     style = 'grid')
+# cat(table)
+table
+```
+:::
 
