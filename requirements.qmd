@@ -9,15 +9,16 @@ Labs
     - Revise and resubmit at least 4 labs, as necessary, until they pass all automatic checks
 
 Project
- ~ The course project is divided into 5 stages, with soft deadlines throughout the semester.  Detailed instructions and guidelines are [here](project).  
+ ~ The course project is divided into stages, with soft deadlines throughout the semester.  Detailed instructions and guidelines are [here](project).  
 
 |    | stage                     | deadline |
 |----|---------------------------|----------|
 |  1 | Proposal                  | Sept 22  |
 |  2 | Data journey narrative    | Oct  13  |
 |  3 | Exploratory data analysis | Oct  27  |
-|  4 | Reproducible report       | Dec   8  |
-|  5 | Flash talk presentation   | Dec  13  |
+|  4 | Code review               | Nov  17  |
+|  5 | Reproducible report       | Dec   8  |
+|  6 | Flash talk presentation   | Dec  13  |
 
 The usual
  ~ Do the assigned reading, come to class prepared to discuss it, contribute to class and your lab collaborations, and so on. 

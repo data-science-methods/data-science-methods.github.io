@@ -3,7 +3,7 @@ title: "Course project"
 toc: true
 ---
 
-In this project, you'll practice and synthesize your data science skills.  The project is [scaffolded](https://en.wikipedia.org/wiki/Instructional_scaffolding#Levels_and_types_in_the_educational_setting) into 5 stages, with due dates throughout the term.  The project is progressive and iterative:  you'll get feedback from me after each stage, and be able to rework previous stages if necessary as you move forward.  
+In this project, you'll practice and synthesize your data science skills.  The project is [scaffolded](https://en.wikipedia.org/wiki/Instructional_scaffolding#Levels_and_types_in_the_educational_setting) into 6 stages, with due dates throughout the term.  The project is progressive and iterative:  you'll get feedback from me after each stage, and be able to rework previous stages if necessary as you move forward.  
 
 # Proposal
 
@@ -38,10 +38,34 @@ Data and Methods
 
 # Exploratory data analysis
 
-*[tbd]*
+**What to submit:** A link to your GitHub repo (with access if it's private). The EDA itself should have two analysis files: an `R` or `Rmd` script, and an `html` file generated from the script using knitr/Rmarkdown/Quarto.  If your code requires anything more than simply running the script, include instructions in a README. 
 
 Your exploratory analysis should cover the most relevant elements from the EDA checklists to validate your data.  Be sure to identify and address limitations of your data for answering your research question. 
-If your EDA concludes that these data are not fit for purpose, it's okay to continue forward with your project.  Your report in the next stage should focus on explaining why your data are not fit for purpose, and then discuss how better data might be collected.  
+
+If your EDA concludes that these data are not fit for purpose, it's okay to continue forward with your project.  Your report below should focus on explaining why your data are not fit for purpose, and then discuss how better data might be collected.  
+
+
+# Code review and reproducibility check
+
+**What to submit:** You'll submit your code review by adding comments to the author's code and then submitting a pull request. See the instructions below. 
+
+::: {.callout-note collapse=true}
+## Code review step-by-step instructions
+
+1. Fork and clone the repository you'll be reviewing
+2. As you review the code, add comments directly to the code
+    - Start your comments in a distinctive way, eg, `#DH#`.  Then the author can find your comments with a quick text search. 
+3. When you're finished, commit your changes (the comments), push, and file a PR against the author's main branch
+4. Author and reviewer can use GitHub's discussion features on the PR to ask followup questions or clarify comments
+5. As you address the comments from your reviewer, remove their comments and note "done" in the PR.  Then a quick text search and review of the PR can confirm once you've addressed all the comments. 
+:::
+
+As in the code review lab, your code review should cover the most relevant checklist elements. Specifically, be sure to address: 
+
+- Is it clear what steps you need to take to run the script? 
+- When you follow those steps, does the script run? 
+- Is the html file from the repository reproducible?  
+- How easy or difficult is it to read the script and understand what the author is doing and why? 
 
 
 # (Reproducible) report
@@ -52,7 +76,7 @@ The report for your analysis should structured somewhat like a traditional scien
 
 The total length of this report should be 3,000-5,000 words, not including references. 
 
-*As a stretch goal*, your report should be **fully reproducible**.  Using `renv` and a Makefile, I should be able to clone your repository and then follow instructions in the `README` to exactly reproduce the PDF of your report.  
+*As a stretch goal*, your report should be **fully reproducible**.  Using `renv` and a Makefile, I should be able to clone your repository, run `renv::restore()` and then `make`, and exactly reproduce the PDF of your report. 
 
 
 Introduction

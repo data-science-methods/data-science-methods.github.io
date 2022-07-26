@@ -108,6 +108,7 @@ ul.task-list{list-style: none;}
   <li><a href="#proposal" id="toc-proposal" class="nav-link active" data-scroll-target="#proposal">Proposal</a></li>
   <li><a href="#data-journey-narrative" id="toc-data-journey-narrative" class="nav-link" data-scroll-target="#data-journey-narrative">Data journey narrative</a></li>
   <li><a href="#exploratory-data-analysis" id="toc-exploratory-data-analysis" class="nav-link" data-scroll-target="#exploratory-data-analysis">Exploratory data analysis</a></li>
+  <li><a href="#code-review-and-reproducibility-check" id="toc-code-review-and-reproducibility-check" class="nav-link" data-scroll-target="#code-review-and-reproducibility-check">Code review and reproducibility check</a></li>
   <li><a href="#reproducible-report" id="toc-reproducible-report" class="nav-link" data-scroll-target="#reproducible-report">(Reproducible) report</a></li>
   <li><a href="#flash-talk-presentation" id="toc-flash-talk-presentation" class="nav-link" data-scroll-target="#flash-talk-presentation">Flash talk presentation</a></li>
   </ul>
@@ -132,7 +133,7 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p>In this project, you’ll practice and synthesize your data science skills. The project is <a href="https://en.wikipedia.org/wiki/Instructional_scaffolding#Levels_and_types_in_the_educational_setting">scaffolded</a> into 5 stages, with due dates throughout the term. The project is progressive and iterative: you’ll get feedback from me after each stage, and be able to rework previous stages if necessary as you move forward.</p>
+<p>In this project, you’ll practice and synthesize your data science skills. The project is <a href="https://en.wikipedia.org/wiki/Instructional_scaffolding#Levels_and_types_in_the_educational_setting">scaffolded</a> into 6 stages, with due dates throughout the term. The project is progressive and iterative: you’ll get feedback from me after each stage, and be able to rework previous stages if necessary as you move forward.</p>
 <section id="proposal" class="level1">
 <h1>Proposal</h1>
 <p><strong>What to submit:</strong> The proposal document, in the text of an email or as an attached plaintext, HTML, or PDF file</p>
@@ -163,15 +164,53 @@ What dataset will you use to investigate your question? Why does this dataset se
 </section>
 <section id="exploratory-data-analysis" class="level1">
 <h1>Exploratory data analysis</h1>
-<p><em>[tbd]</em></p>
-<p>Your exploratory analysis should cover the most relevant elements from the EDA checklists to validate your data. Be sure to identify and address limitations of your data for answering your research question. If your EDA concludes that these data are not fit for purpose, it’s okay to continue forward with your project. Your report in the next stage should focus on explaining why your data are not fit for purpose, and then discuss how better data might be collected.</p>
+<p><strong>What to submit:</strong> A link to your GitHub repo (with access if it’s private). The EDA itself should have two analysis files: an <code>R</code> or <code>Rmd</code> script, and an <code>html</code> file generated from the script using knitr/Rmarkdown/Quarto. If your code requires anything more than simply running the script, include instructions in a README.</p>
+<p>Your exploratory analysis should cover the most relevant elements from the EDA checklists to validate your data. Be sure to identify and address limitations of your data for answering your research question.</p>
+<p>If your EDA concludes that these data are not fit for purpose, it’s okay to continue forward with your project. Your report below should focus on explaining why your data are not fit for purpose, and then discuss how better data might be collected.</p>
+</section>
+<section id="code-review-and-reproducibility-check" class="level1">
+<h1>Code review and reproducibility check</h1>
+<p><strong>What to submit:</strong> You’ll submit your code review by adding comments to the author’s code and then submitting a pull request. See the instructions below.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Code review step-by-step instructions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Fork and clone the repository you’ll be reviewing</li>
+<li>As you review the code, add comments directly to the code
+<ul>
+<li>Start your comments in a distinctive way, eg, <code>#DH#</code>. Then the author can find your comments with a quick text search.</li>
+</ul></li>
+<li>When you’re finished, commit your changes (the comments), push, and file a PR against the author’s main branch</li>
+<li>Author and reviewer can use GitHub’s discussion features on the PR to ask followup questions or clarify comments</li>
+<li>As you address the comments from your reviewer, remove their comments and note “done” in the PR. Then a quick text search and review of the PR can confirm once you’ve addressed all the comments.</li>
+</ol>
+</div>
+</div>
+</div>
+<p>As in the code review lab, your code review should cover the most relevant checklist elements. Specifically, be sure to address:</p>
+<ul>
+<li>Is it clear what steps you need to take to run the script?</li>
+<li>When you follow those steps, does the script run?</li>
+<li>Is the html file from the repository reproducible?<br>
+</li>
+<li>How easy or difficult is it to read the script and understand what the author is doing and why?</li>
+</ul>
 </section>
 <section id="reproducible-report" class="level1">
 <h1>(Reproducible) report</h1>
 <p><strong>What to submit:</strong> A PDF of your report, a link or invitation to your GitHub repo with automatically reproducible code and data</p>
 <p>The report for your analysis should structured somewhat like a traditional scientific paper: introduction, methods, results, discussion. But the content of these sections will be somewhat non-traditional.</p>
 <p>The total length of this report should be 3,000-5,000 words, not including references.</p>
-<p><em>As a stretch goal</em>, your report should be <strong>fully reproducible</strong>. Using <code>renv</code> and a Makefile, I should be able to clone your repository and then follow instructions in the <code>README</code> to exactly reproduce the PDF of your report.</p>
+<p><em>As a stretch goal</em>, your report should be <strong>fully reproducible</strong>. Using <code>renv</code> and a Makefile, I should be able to clone your repository, run <code>renv::restore()</code> and then <code>make</code>, and exactly reproduce the PDF of your report.</p>
 <dl>
 <dt>Introduction</dt>
 <dd>
