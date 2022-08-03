@@ -12,12 +12,12 @@ Project
  ~ The course project is divided into stages, with soft deadlines throughout the semester.  Detailed instructions and guidelines are [here](project).  
 
 |    | stage                     | deadline |
-|----|---------------------------|----------|
+|----|---------------------------|---------:|
 |  1 | Proposal                  | Sept 22  |
 |  2 | Data journey narrative    | Oct  13  |
-|  3 | Exploratory data analysis | Oct  27  |
-|  4 | Code review               | Nov  17  |
-|  5 | Reproducible report       | Dec   8  |
+|  3 | Exploratory data analysis | Nov  10  |
+|  4 | Code review               | Dec   1  |
+|  5 | Reproducible report       | Dec  13  |
 |  6 | Flash talk presentation   | Dec  13  |
 
 The usual
