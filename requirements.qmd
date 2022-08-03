@@ -29,7 +29,7 @@ The usual
 Until the end of term, all deadlines are soft, with no penalties for turning in assignments a few days late.  Labs have a soft deadline  of 2 weeks for an initial submission, with an additional week to revise & resubmit as necessary to satisfy the automatic checks. 
 
 ::: aside
-I've found soft deadlines work well for about 80% students, who need the flexibility to handle ::gestures at the entire state of everything::.  **If soft deadlines don't work well for you, treat the soft deadlines as hard deadlines.**  I will also try to follow up with you if I notice you're missing a lot of earlier work.  
+I've found soft deadlines work well for about 80% students, who need the flexibility to handle ::gestures at the entire state of everything::  **If soft deadlines don't work well for you, treat the soft deadlines as hard deadlines.**  I will also try to follow up with you if I notice you're missing a lot of earlier work.  
 :::
 
 ---
