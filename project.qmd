@@ -33,14 +33,32 @@ Data and Methods
 
 # Data journey narrative
 
-*[tbd]*
+**What to submit:** A document, by email, preferably as an attached plaintext, HTML, or PDF file. 
+
+Characterize the journey that your data took to get to you.  Some relevant questions to answer might include
+
+- Who generated these data?  Why?  How? 
+- What measurement instruments were used to generate these data?  What infrastructure has been used to store and transmit the data? 
+- What was the original intended use of these data?  What are some other ways the data have been used? 
+- How has the mutability/immutability of the data been important to its journey & use?  How has its mutability/immutability been created and maintained?  
+- How will you need to transform the data further for your project?  How do the physical and material properties of the data facilitate this, and/or create friction?  
+- What values have been crystallized in the data?  How have power relations and values shaped what is/isn't included in the data? 
+- Based on these factors, do the data appear to be fit for purpose? That is, based on what you know so far, do the data appear to be appropriate for answering your research question?  
+
+Include references for the sources you use to answer these questions.  You can work on this step of the project at the same time as the EDA step, but I will ask you to turn in the data journey narrative first.  A good target length for your narrative is 500-1,000 words long, not counting any references.  
+
 
 
 # Exploratory data analysis
 
-**What to submit:** A link to your GitHub repo (with access if it's private). The EDA itself should have two analysis files: an `R` or `Rmd` script, and an `html` file generated from the script using knitr/Rmarkdown/Quarto.  If your code requires anything more than simply running the script, include instructions in a README. 
+**What to submit:** A link to your GitHub repo (with access if it's private). The EDA itself should have two analysis files: an `R` or `Rmd` script, and an `html` file generated from the script using knitr/Rmarkdown/Quarto.  If your code requires anything more than simply running the script, include instructions in a README.  *Your code from this step will go through peer review in the next step.*
 
-Your exploratory analysis should cover the most relevant elements from the EDA checklists to validate your data.  Be sure to identify and address limitations of your data for answering your research question. 
+Your exploratory analysis should cover the most relevant elements from the EDA checklists to validate your data.  Be sure to identify and address limitations of your data for answering your research question.   
+
+Use a [literate programming](https://en.wikipedia.org/wiki/Literate_programming) style, mixing code with expository text.  [Julia Silge](https://juliasilge.com/) has several good examples of blog tutorials written in this style: 
+
+- [Sliding windows for #TidyTuesday rents in San Francisco](https://juliasilge.com/blog/sf-rent/)
+- [Reordering and facetting for ggplot2](https://juliasilge.com/blog/reorder-within/)
 
 If your EDA concludes that these data are not fit for purpose, it's okay to continue forward with your project.  Your report below should focus on explaining why your data are not fit for purpose, and then discuss how better data might be collected.  
 

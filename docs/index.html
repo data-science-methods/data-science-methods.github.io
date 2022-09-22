@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.600">
+<meta name="generator" content="quarto-1.1.245">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 </style>
 
 
@@ -33,7 +38,7 @@ ul.task-list{list-style: none;}
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -64,9 +69,11 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="./index.html">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Methods of Data Science I</span>
-  </a>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -122,12 +129,12 @@ table {
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="szcrhfdtpu" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="vxyzbkzdjx" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#szcrhfdtpu .gt_table {
+#vxyzbkzdjx .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -152,7 +159,7 @@ table {
   border-left-color: #D3D3D3;
 }
 
-#szcrhfdtpu .gt_heading {
+#vxyzbkzdjx .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -164,7 +171,7 @@ table {
   border-right-color: #D3D3D3;
 }
 
-#szcrhfdtpu .gt_title {
+#vxyzbkzdjx .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -176,7 +183,7 @@ table {
   border-bottom-width: 0;
 }
 
-#szcrhfdtpu .gt_subtitle {
+#vxyzbkzdjx .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -188,13 +195,13 @@ table {
   border-top-width: 0;
 }
 
-#szcrhfdtpu .gt_bottom_border {
+#vxyzbkzdjx .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#szcrhfdtpu .gt_col_headings {
+#vxyzbkzdjx .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -209,7 +216,7 @@ table {
   border-right-color: #D3D3D3;
 }
 
-#szcrhfdtpu .gt_col_heading {
+#vxyzbkzdjx .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -229,7 +236,7 @@ table {
   overflow-x: hidden;
 }
 
-#szcrhfdtpu .gt_column_spanner_outer {
+#vxyzbkzdjx .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -241,15 +248,15 @@ table {
   padding-right: 4px;
 }
 
-#szcrhfdtpu .gt_column_spanner_outer:first-child {
+#vxyzbkzdjx .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#szcrhfdtpu .gt_column_spanner_outer:last-child {
+#vxyzbkzdjx .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#szcrhfdtpu .gt_column_spanner {
+#vxyzbkzdjx .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -261,7 +268,7 @@ table {
   width: 100%;
 }
 
-#szcrhfdtpu .gt_group_heading {
+#vxyzbkzdjx .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -286,7 +293,7 @@ table {
   vertical-align: middle;
 }
 
-#szcrhfdtpu .gt_empty_group_heading {
+#vxyzbkzdjx .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -301,15 +308,15 @@ table {
   vertical-align: middle;
 }
 
-#szcrhfdtpu .gt_from_md > :first-child {
+#vxyzbkzdjx .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#szcrhfdtpu .gt_from_md > :last-child {
+#vxyzbkzdjx .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#szcrhfdtpu .gt_row {
+#vxyzbkzdjx .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -328,7 +335,7 @@ table {
   overflow-x: hidden;
 }
 
-#szcrhfdtpu .gt_stub {
+#vxyzbkzdjx .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -341,7 +348,7 @@ table {
   padding-right: 5px;
 }
 
-#szcrhfdtpu .gt_stub_row_group {
+#vxyzbkzdjx .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -355,11 +362,11 @@ table {
   vertical-align: top;
 }
 
-#szcrhfdtpu .gt_row_group_first td {
+#vxyzbkzdjx .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#szcrhfdtpu .gt_summary_row {
+#vxyzbkzdjx .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -369,16 +376,16 @@ table {
   padding-right: 5px;
 }
 
-#szcrhfdtpu .gt_first_summary_row {
+#vxyzbkzdjx .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#szcrhfdtpu .gt_first_summary_row.thick {
+#vxyzbkzdjx .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#szcrhfdtpu .gt_last_summary_row {
+#vxyzbkzdjx .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -388,7 +395,7 @@ table {
   border-bottom-color: #D3D3D3;
 }
 
-#szcrhfdtpu .gt_grand_summary_row {
+#vxyzbkzdjx .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -398,7 +405,7 @@ table {
   padding-right: 5px;
 }
 
-#szcrhfdtpu .gt_first_grand_summary_row {
+#vxyzbkzdjx .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -408,11 +415,11 @@ table {
   border-top-color: #D3D3D3;
 }
 
-#szcrhfdtpu .gt_striped {
+#vxyzbkzdjx .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#szcrhfdtpu .gt_table_body {
+#vxyzbkzdjx .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -421,7 +428,7 @@ table {
   border-bottom-color: #D3D3D3;
 }
 
-#szcrhfdtpu .gt_footnotes {
+#vxyzbkzdjx .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -435,7 +442,7 @@ table {
   border-right-color: #D3D3D3;
 }
 
-#szcrhfdtpu .gt_footnote {
+#vxyzbkzdjx .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -444,7 +451,7 @@ table {
   padding-right: 5px;
 }
 
-#szcrhfdtpu .gt_sourcenotes {
+#vxyzbkzdjx .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -458,7 +465,7 @@ table {
   border-right-color: #D3D3D3;
 }
 
-#szcrhfdtpu .gt_sourcenote {
+#vxyzbkzdjx .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -466,36 +473,36 @@ table {
   padding-right: 5px;
 }
 
-#szcrhfdtpu .gt_left {
+#vxyzbkzdjx .gt_left {
   text-align: left;
 }
 
-#szcrhfdtpu .gt_center {
+#vxyzbkzdjx .gt_center {
   text-align: center;
 }
 
-#szcrhfdtpu .gt_right {
+#vxyzbkzdjx .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#szcrhfdtpu .gt_font_normal {
+#vxyzbkzdjx .gt_font_normal {
   font-weight: normal;
 }
 
-#szcrhfdtpu .gt_font_bold {
+#vxyzbkzdjx .gt_font_bold {
   font-weight: bold;
 }
 
-#szcrhfdtpu .gt_font_italic {
+#vxyzbkzdjx .gt_font_italic {
   font-style: italic;
 }
 
-#szcrhfdtpu .gt_super {
+#vxyzbkzdjx .gt_super {
   font-size: 65%;
 }
 
-#szcrhfdtpu .gt_two_val_uncert {
+#vxyzbkzdjx .gt_two_val_uncert {
   display: inline-block;
   line-height: 1em;
   text-align: right;
@@ -504,31 +511,31 @@ table {
   margin-left: 0.1em;
 }
 
-#szcrhfdtpu .gt_footnote_marks {
+#vxyzbkzdjx .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#szcrhfdtpu .gt_asterisk {
+#vxyzbkzdjx .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#szcrhfdtpu .gt_slash_mark {
+#vxyzbkzdjx .gt_slash_mark {
   font-size: 0.7em;
   line-height: 0.7em;
   vertical-align: 0.15em;
 }
 
-#szcrhfdtpu .gt_fraction_numerator {
+#vxyzbkzdjx .gt_fraction_numerator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: 0.45em;
 }
 
-#szcrhfdtpu .gt_fraction_denominator {
+#vxyzbkzdjx .gt_fraction_denominator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: -0.05em;
@@ -576,7 +583,7 @@ table {
 <li><strong>Optional</strong>: Baumer, Ben, Mine Cetinkaya-Rundel, Andrew Bray, Linda Loi, and Nicholas J. Horton. 2014. “R Markdown: Integrating A Reproducible Analysis Tool into Introductory Statistics.” ArXiv:1402.1894 [Stat], February. <a href="http://arxiv.org/abs/1402.1894">http://arxiv.org/abs/1402.1894</a>.</li>
 </ul>
 </div></td>
-<td class="gt_row gt_left" style="vertical-align: top;"><div class="gt_from_md"><p><a href="https://github.com/data-science-methods/lab-w02-git">Lab 1: Git</a></p>
+<td class="gt_row gt_left" style="vertical-align: top;"><div class="gt_from_md"><p><a href="https://github.com/data-science-methods/lab-1-git">Lab 1: Git</a></p>
 </div></td></tr>
     <tr><td class="gt_row gt_right" style="vertical-align: top;">3</td>
 <td class="gt_row gt_left" style="vertical-align: top;">Sep 06</td>
@@ -588,7 +595,7 @@ table {
 <li>Wickham, Hadley. 2019. “Debugging.” In Advanced R, Second Edition, chap. 22. CRC Press. <a href="https://adv-r.hadley.nz/debugging.html">https://adv-r.hadley.nz/debugging.html</a>.</li>
 </ul>
 </div></td>
-<td class="gt_row gt_left" style="vertical-align: top;"><div class="gt_from_md"><p><a href="https://github.com/data-science-methods/lab-w03-debugging">Lab 2: Debugging</a></p>
+<td class="gt_row gt_left" style="vertical-align: top;"><div class="gt_from_md"><p><a href="https://github.com/data-science-methods/lab-2-debugging">Lab 2: Debugging</a></p>
 </div></td></tr>
     <tr><td class="gt_row gt_right" style="vertical-align: top;">4</td>
 <td class="gt_row gt_left" style="vertical-align: top;">Sep 13</td>
@@ -600,7 +607,7 @@ table {
 <li>Chambers, John M. 2014. “Object-Oriented Programming, Functional Programming and R.” Statistical Science 29 (2): 167–80. <a href="https://doi.org/10.1214/13-STS452">https://doi.org/10.1214/13-STS452</a>. (<a href="https://drive.google.com/file/d/1fhgHVx1vnhCBay9pPnNNTBuIZORNRGwL/view?usp=sharing">Non-paywalled copy</a>)</li>
 </ul>
 </div></td>
-<td class="gt_row gt_left" style="vertical-align: top;"><div class="gt_from_md"><p><a href="https://github.com/data-science-methods/lab-w04-paradigms">Lab 3: Programming paradigms</a></p>
+<td class="gt_row gt_left" style="vertical-align: top;"><div class="gt_from_md"><p><a href="https://github.com/data-science-methods/lab-3-paradigms">Lab 3: Programming paradigms</a></p>
 </div></td></tr>
     <tr><td class="gt_row gt_right" style="vertical-align: top;">5</td>
 <td class="gt_row gt_left" style="vertical-align: top;">Sep 20</td>
@@ -634,7 +641,7 @@ table {
 </div></td>
 <td class="gt_row gt_left" style="vertical-align: top;"><div class="gt_from_md"><p><em>No new readings</em></p>
 </div></td>
-<td class="gt_row gt_left" style="vertical-align: top;"><div class="gt_from_md"><p><a href="">Lab 4: EDA</a></p>
+<td class="gt_row gt_left" style="vertical-align: top;"><div class="gt_from_md"><p><a href="https://github.com/data-science-methods/lab-4-eda">Lab 4: EDA</a></p>
 </div></td></tr>
     <tr><td class="gt_row gt_right" style="vertical-align: top;">8</td>
 <td class="gt_row gt_left" style="vertical-align: top;">Oct 11</td>
@@ -694,7 +701,7 @@ table {
 <td class="gt_row gt_left" style="vertical-align: top;"><div class="gt_from_md"><p><em>No class: Election Day &amp; Instructor at conference</em></p>
 </div></td>
 <td class="gt_row gt_left" style="vertical-align: top;"></td>
-<td class="gt_row gt_left" style="vertical-align: top;"><div class="gt_from_md"><p><a href="">Project: EDA</a></p>
+<td class="gt_row gt_left" style="vertical-align: top;"><div class="gt_from_md"><p><a href="https://data-science-methods.github.io/project.html#exploratory-data-analysis">Project: EDA</a></p>
 </div></td></tr>
     <tr><td class="gt_row gt_right" style="vertical-align: top;">13</td>
 <td class="gt_row gt_left" style="vertical-align: top;">Nov 15</td>
@@ -757,6 +764,24 @@ table {
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -806,7 +831,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
