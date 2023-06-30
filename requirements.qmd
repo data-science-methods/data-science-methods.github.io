@@ -32,8 +32,8 @@ Labs
 |----|---------------------------|---------:|
 |  1 | Git                       |   Sep 15 |
 |  2 | Debugging                 |   Sep 22 |
-|  3 | Functional Programming    |   Sep 29 |
-|  4 | EDA                       |   Oct 20 |
+|  3 | Functional Programming    |   Oct 6  |
+|  4 | EDA                       |   Oct 27 |
 |  5 | Code Review               |   Dec 1  |
 |  6 | Reproducibility           |   Dec 1  |
 
@@ -45,8 +45,8 @@ Project
 |----|---------------------------|---------:|
 |  1 | Proposal                  | Sept 22  |
 |  2 | Data journey narrative    | Oct  13  |
-|  3 | Exploratory data analysis | Nov  17  |
-|  4 | Code review               | Dec   1  |
+|  3 | Exploratory data analysis | Nov   3  |
+|  4 | Code review               | Dec   8  |
 |  5 | Reproducible report       | Dec  13  |
 |  6 | Flash talk presentation   | Dec  13  |
 
