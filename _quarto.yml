@@ -9,7 +9,7 @@ website:
       - href: index.qmd
         text: Reading & Schedule
       - requirements.qmd
-      - reflexivity.qmd
+#       - reflexivity.qmd
       - project.qmd
       - href: https://data-science-methods.github.io/book/
         text: Lecture notes

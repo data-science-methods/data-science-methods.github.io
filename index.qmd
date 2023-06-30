@@ -1,12 +1,11 @@
 
-
-Fall 2022  
-UC Merced  
-Prof. Dan Hicks (they/them)\
-[Sign up for office hours](https://doodle.com/mm/danhicks/office-hours)
-
-GRAN 120  
-TÞ 12:00-1:15pm
+| Fall 2023 
+| UC Merced  
+| Prof. Dan Hicks (they/them)
+| <dhicks4@ucmerced.edu> or <hicks.daniel.j@gmail.com>
+| 
+| GRAN 140 
+| TÞ 1:30-2:45pm
 
 ```{r setup}
 #| include: false
@@ -16,7 +15,7 @@ library(lubridate)
 # library(pander)
 library(gt)
 
-overview_gs = 'https://docs.google.com/spreadsheets/d/1tV011kdW-wMbch97FMdhArL9Boy_uIi15hwE3BtCjaw/edit#gid=1257700791'
+overview_gs = 'https://docs.google.com/spreadsheets/d/1LQCSEmkjDXEEPdSaM6xMU9yr5or3fercHpFVKTgdITk/edit#gid=1257700791'
 
 overview_df = read_sheet(overview_gs, 
                          col_types = 'iDcccc') |> 
@@ -69,9 +68,9 @@ table = overview_df |>
     #           locations = cells_body(rows = (week %% 2 == 0)))
     ## Group rows into units
     tab_row_group(label = 'Reproducibility and replicability', 
-                  rows = 9:16) |> 
+                  rows = 10:16) |> 
     tab_row_group(label = 'Exploratory data analysis', 
-                  rows = 6:8) |> 
+                  rows = 6:9) |> 
     tab_row_group(label = 'Some fundamental tools', 
                   rows = 1:5) |> 
     tab_style(style = list(cell_text(color = 'white', 
