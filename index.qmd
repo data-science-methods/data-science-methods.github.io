@@ -68,9 +68,9 @@ table = overview_df |>
     #           locations = cells_body(rows = (week %% 2 == 0)))
     ## Group rows into units
     tab_row_group(label = 'Reproducibility and replicability', 
-                  rows = 10:16) |> 
+                  rows = 11:16) |> 
     tab_row_group(label = 'Exploratory data analysis', 
-                  rows = 6:9) |> 
+                  rows = 6:10) |> 
     tab_row_group(label = 'Some fundamental tools', 
                   rows = 1:5) |> 
     tab_style(style = list(cell_text(color = 'white', 
