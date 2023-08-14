@@ -3,6 +3,23 @@ title: "Requirements"
 toc: true
 ---
 
+
+# What this course isn’t, and is
+
+Is Not:
+
+- a statistics course (in the way you think)
+- a general introduction to software engineering
+- a basic introduction to R
+- an introduction to machine learning or AI
+
+Is:
+
+- an introduction to data science
+- about exploratory data analysis, data management, reproducibility — and a little philosophy of science
+- habituation to some good software engineering practices that are especially valuable for data science work
+
+
 # Prerequisites
 
 This course assumes **basic competence** with **introductory R**. 
